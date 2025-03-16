@@ -1,0 +1,14 @@
+{
+  "name": "pinwheel-tailwind",
+  "version": "1.0.0",
+  "description": "Tailwind CSS version of Pinwheel theme",
+  "scripts": {
+    "dev": "tailwindcss -i ./styles/tailwind.css -o ./styles/main.css --watch",
+    "build": "tailwindcss -i ./styles/tailwind.css -o ./styles/main.css --minify"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17"
+  }
+}
