@@ -1,848 +1,502 @@
 <!DOCTYPE html>
+<html lang="en">
 
-
-<html lang="zxx">
 <head>
-
-
-  <!-- favicon -->
-  <link rel="shortcut icon" href="images/favicon.png" />
-  <!-- theme meta -->
-  <meta name="theme-name" content="Pinwheel" />
-  <meta name="msapplication-TileColor" content="#000000" />
-  <meta
-    name="theme-color"
-    media="(prefers-color-scheme: light)"
-    content="#fff"
-  />
-  <meta
-    name="theme-color"
-    media="(prefers-color-scheme: dark)"
-    content="#000"
-  />
-  <meta name="generator" content="gulp" />
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-  <!-- responsive meta -->
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=5"
-  />
-
-  <!-- title -->
-  <title>Pinwheel-tailwind</title>
-<!-- 
-  <script src="https://cdn.tailwindcss.com"></script> -->
-
-  <!-- noindex robots -->
-  <meta name="robots" content="" />
-
-  <!-- meta-description -->
-  <meta name="description" content="meta description" />
-
-  <!-- author from config.json -->
-  <meta name="author" content="{config.metadata.meta_author}" />
-
-  <!-- og-title -->
-  <meta property="og:title" content="" />
-
-  <!-- og-description -->
-  <meta property="og:description" content="" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="/" />
-
-  <!-- twitter-title -->
-  <meta name="twitter:title" content="" />
-
-  <!-- twitter-description -->
-  <meta name="twitter:description" content="" />
-
-  <!-- og-image -->
-  <meta property="og:image" content="" />
-
-  <!-- twitter-image -->
-  <meta name="twitter:image" content="" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- google font css -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- styles -->
-
-  <!-- Swiper slider -->
-  <link rel="stylesheet" href="plugins/swiper/swiper-bundle.css" />
-
-  <!-- Fontawesome -->
-  <link rel="stylesheet" href="plugins/font-awesome/v6/brands.css" />
-  <link rel="stylesheet" href="plugins/font-awesome/v6/solid.css" />
-  <link rel="stylesheet" href="plugins/font-awesome/v6/fontawesome.css" />
-
-  <!-- Main Stylesheet -->
-  <!-- <link href="styles/main.css" rel="stylesheet" /> -->
-   <!-- <link rel="stylesheet" href="./dist/output.css"> -->
-   <link rel="stylesheet" href="./src/output.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azzel</title>
+  <link rel="stylesheet" href="./src/output.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<header class="header">
-  <nav class="navbar container">
-    <!-- logo -->
-    <div class="order-0">
-      <a href="index.html">
-        <img src="images/logo.svg" height="30" width="147" alt="logo" />
-      </a>
-    </div>
-    <!-- navbar toggler -->
-    <input id="nav-toggle" type="checkbox" class="hidden" />
-    <label
-      id="show-button"
-      for="nav-toggle"
-      class="order-1 flex cursor-pointer items-center lg:order-1 lg:hidden"
-    >
-      <svg class="h-6 fill-current" viewBox="0 0 20 20">
-        <title>Menu Open</title>
-        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
-      </svg>
-    </label>
-    <label
-      id="hide-button"
-      for="nav-toggle"
-      class="order-2 hidden cursor-pointer items-center lg:order-1"
-    >
-      <svg class="h-6 fill-current" viewBox="0 0 20 20">
-        <title>Menu Close</title>
-        <polygon
-          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
-          transform="rotate(45 10 10)"
-        ></polygon>
-      </svg>
-    </label>
-    <!-- /navbar toggler -->
-    <ul
-      id="nav-menu"
-      class="navbar-nav order-2 hidden w-full flex-[0_0_100%] lg:order-1 lg:flex lg:w-auto lg:flex-auto lg:justify-center lg:space-x-5"
-    >
-      <li class="nav-item">
-        <a href="" class="nav-link active">Home</a>
-      </li>
-      <li class="nav-item">
-        <a href="about.html" class="nav-link">About</a>
-      </li>
-      <li class="nav-item">
-        <a href="blog.html" class="nav-link">Blog</a>
-      </li>
-      <li class="nav-item">
-        <a href="features.html" class="nav-link">Features</a>
-      </li>
-      <li class="nav-item">
-        <a href="how-it-works.html" class="nav-link">How It Works</a>
-      </li>
-      <li class="nav-item nav-dropdown group relative">
-        <span class="nav-link inline-flex items-center">
-          Pages
-          <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
-            <path
-              d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-            />
-          </svg>
-        </span>
-        <ul
-          class="nav-dropdown-list hidden group-hover:block lg:invisible lg:absolute lg:block lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100"
-        >
-          <li class="nav-dropdown-item">
-            <a href="career.html" class="nav-dropdown-link">Career</a>
-          </li>
-          <li class="nav-dropdown-item">
-            <a href="career-single.html" class="nav-dropdown-link"
-              >Career Single</a
-            >
-          </li>
-          <li class="nav-dropdown-item">
-            <a href="integrations.html" class="nav-dropdown-link"
-              >Integrations</a
-            >
-          </li>
-          <li class="nav-dropdown-item">
-            <a href="integration-single.html" class="nav-dropdown-link"
-              >Integration Single</a
-            >
-          </li>
-          <li class="nav-dropdown-item">
-            <a href="pricing.html" class="nav-dropdown-link">Pricing</a>
-          </li>
-          <li class="nav-dropdown-item">
-            <a href="changelogs.html" class="nav-dropdown-link">Changelogs</a>
-          </li>
-          <li class="nav-dropdown-item">
-            <a href="terms-conditions.html" class="nav-dropdown-link"
-              >Terms & Conditions</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a href="contact.html" class="nav-link">Contact</a>
-      </li>
-      <li class="nav-item mt-3.5 lg:hidden">
-        <a class="btn btn-white btn-sm border-border" href="signin.html"
-          >Sing Up Now</a
-        >
-      </li>
-    </ul>
-    <div class="order-1 ml-auto hidden items-center md:order-2 md:ml-0 lg:flex">
-      <a class="btn btn-white btn-sm" href="signin.html">Sign Up Now</a>
-    </div>
-  </nav>
-</header>
+<body>
 
-
-<body><!-- Banner -->
-<section class="section banner relative">
-  <div class="container">
-    <div class="row items-center">
-      <div class="lg:col-6">
-        <h1 class="banner-title">
-          Scale design & dev operations with Avocode Enterprise
-        </h1>
-        <p class="mt-6">
-          A fully integrated suite of authentication & authoriz products,
-          Stytch’s platform removes the headache of.
-        </p>
-        <a class="btn btn-white mt-8" href="#">Download The Theme</a>
-      </div>
-      <div class="lg:col-6">
-        <img
-          class="w-full object-contain"
-          src="images/banner-img.png"
-          width="603"
-          height="396"
-          alt=""
-        />
-      </div>
-    </div>
-  </div>
-  <img
-    class="banner-shape absolute -top-28 right-0 -z-[1] w-full max-w-[30%]"
-    src="images/banner-shape.svg"
-    alt=""
-  />
-</section>
-<!-- ./end Banner -->
-
-<!-- Key features -->
-<section class="section key-feature relative">
-  <img
-    class="absolute left-0 top-0 -z-[1] -translate-y-1/2"
-    src="images/icons/feature-shape.svg"
-    alt=""
-  />
-  <div class="container">
-    <div class="row justify-between text-center lg:text-start">
-      <div class="lg:col-5">
-        <h2>The Highlighting Part Of Our Solution</h2>
-      </div>
-      <div class="mt-6 lg:col-5 lg:mt-0">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas
-          Werat viverra id et aliquet. vulputate egestas sollicitudin .
-        </p>
-      </div>
-    </div>
-    <div
-      class="key-feature-grid mt-10 grid grid-cols-2 gap-7 md:grid-cols-3 xl:grid-cols-4"
-    >
-      <div
-        class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
-      >
-        <div>
-          <h3 class="h4 text-xl lg:text-2xl">Live Caption</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        </div>
-        <span class="icon mt-4">
-          <img
-            class="objec-contain"
-            src="images/icons/feature-icon-1.svg"
-            alt=""
-          />
-        </span>
-      </div>
-      <div
-        class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
-      >
-        <div>
-          <h3 class="h4 text-xl lg:text-2xl">Smart Reply</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        </div>
-        <span class="icon mt-4">
-          <img
-            class="objec-contain"
-            src="images/icons/feature-icon-2.svg"
-            alt=""
-          />
-        </span>
-      </div>
-      <div
-        class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
-      >
-        <div>
-          <h3 class="h4 text-xl lg:text-2xl">Sound Amplifier</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        </div>
-        <span class="icon mt-4">
-          <img
-            class="objec-contain"
-            src="images/icons/feature-icon-3.svg"
-            alt=""
-          />
-        </span>
-      </div>
-      <div
-        class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
-      >
-        <div>
-          <h3 class="h4 text-xl lg:text-2xl">Gesture Navigation</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        </div>
-        <span class="icon mt-4">
-          <img
-            class="objec-contain"
-            src="images/icons/feature-icon-4.svg"
-            alt=""
-          />
-        </span>
-      </div>
-      <div
-        class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
-      >
-        <div>
-          <h3 class="h4 text-xl lg:text-2xl">Dark Theme</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        </div>
-        <span class="icon mt-4">
-          <img
-            class="objec-contain"
-            src="images/icons/feature-icon-5.svg"
-            alt=""
-          />
-        </span>
-      </div>
-      <div
-        class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
-      >
-        <div>
-          <h3 class="h4 text-xl lg:text-2xl">Privacy Controls</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        </div>
-        <span class="icon mt-4">
-          <img
-            class="objec-contain"
-            src="images/icons/feature-icon-6.svg"
-            alt=""
-          />
-        </span>
-      </div>
-      <div
-        class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
-      >
-        <div>
-          <h3 class="h4 text-xl lg:text-2xl">Location Controls</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        </div>
-        <span class="icon mt-4">
-          <img
-            class="objec-contain"
-            src="images/icons/feature-icon-7.svg"
-            alt=""
-          />
-        </span>
-      </div>
-      <div
-        class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
-      >
-        <div>
-          <h3 class="h4 text-xl lg:text-2xl">Security Updates</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        </div>
-        <span class="icon mt-4">
-          <img
-            class="objec-contain"
-            src="images/icons/feature-icon-8.svg"
-            alt=""
-          />
-        </span>
-      </div>
-      <div
-        class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
-      >
-        <div>
-          <h3 class="h4 text-xl lg:text-2xl">Focus Mode</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        </div>
-        <span class="icon mt-4">
-          <img
-            class="objec-contain"
-            src="images/icons/feature-icon-9.svg"
-            alt=""
-          />
-        </span>
-      </div>
-      <div
-        class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
-      >
-        <div>
-          <h3 class="h4 text-xl lg:text-2xl">Family Link</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        </div>
-        <span class="icon mt-4">
-          <img
-            class="objec-contain"
-            src="images/icons/feature-icon-10.svg"
-            alt=""
-          />
-        </span>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- ./end Key features -->
-
-<!-- Services -->
-<section class="section services">
-  <div class="container">
-    <div class="tab row gx-5 items-center" data-tab-group="integration-tab">
-      <div class="lg:col-7 lg:order-2">
-        <div class="tab-content" data-tab-content>
-          <div class="tab-content-panel active" data-tab-panel="0">
-            <img
-              class="w-full object-contain"
-              src="images/sells-by-country.png"
-            />
+  <main>
+    <!-- AI-Powered -->
+    <section class="py-20 mx-8 animate__animated animate__fadeInUp wow md:px-0 lg:px-0">
+      <div class="bg-black rounded-[50px] flex flex-col lg:flex-row justify-center">
+        <!-- Image -->
+        <div class="lg:w-[40%] relative">
+          <div class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[120px] h-[120px]">
+            <div class="absolute w-full h-full rounded-full bg-[#4b5563] animate-ping-slow"></div>
+            <div
+              class="relative w-full h-full border-[3px] border-black rounded-full flex justify-center items-center backdrop-blur-[3px] cursor-pointer hover:bg-[#fe330a] transition-all duration-300 group">
+              <a class="text-xl font-bold text-black transition-all duration-300 cursor-pointer group-hover:text-white"
+                href="https://www.youtube.com/watch?v=3nQNiWdeH2Q"> Play</a>
+            </div>
           </div>
-          <div class="tab-content-panel" data-tab-panel="1">
-            <img class="w-full object-contain" src="images/collaboration.png" />
+
+          <img src="./src/img/funfact-image.jpg" class="w-full object-cover rounded-[50px] lg:h-full h-[320px]" />
+        </div>
+        <!-- Text -->
+        <div class="lg:w-[60%] text-white px-10 md:py-20 py-14">
+          <div class="pb-[60px] border-b border-[#191919]">
+            <h1 class="text-7xl sm:tex-[3.75rem] font-bold md:leading-[68px] md:mb-5 mb-6">
+              AI-powered that streamline tasks
+            </h1>
+            <p class="text-base font-medium md:text-xl">
+              As your business grows or your AI SaaS needs change, you
+              <br />can easily adjust your subscription level to match those
+              needs. <br />
+              This flexibility ensures that AI remains an asset.
+            </p>
           </div>
-          <div class="tab-content-panel" data-tab-panel="2">
-            <img
-              class="w-full object-contain"
-              src="images/sells-by-country.png"
-            />
+
+          <div class="sm:flex pt-[60px] sm:gap-[90px] sm:space-y-0 space-y-10 text-center md:text-start">
+            <div class="flex flex-col">
+              <h1 class="text-8xl font-bold text-[#fe330a]">
+                <span class="counter">92</span>%
+              </h1>
+              <p class="text-base font-medium md:text-xl">
+                Customer service inquiries
+              </p>
+            </div>
+            <div class="flex flex-col">
+              <h1 class="text-8xl font-bold text-[#fe330a]">
+                <span class="counter">75</span>%
+              </h1>
+              <p class="text-base font-medium md:text-xl">
+                Using financial institutions
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="mt-6 lg:col-5 lg:order-1 lg:mt-0">
-        <div class="text-container">
-          <h2 class="lg:text-4xl">
-            Prevent failure from to impacting your reputation
-          </h2>
-          <p class="mt-4">
-            Our platform helps you build secure onboarding authentication
-            experiences that retain and engage your users. We build the
-            infrastructure, you can.
+    </section>
+
+    <!-- Cost -->
+    <section>
+      <div class="relative">
+        <div class="pt-20 mx-auto md:py-0 md:px-0 lg:px-24">
+          <h1 class="pb-16 mx-auto font-bold text-center animate__animated animate__fadeInUp wow text-7xl">
+            Cost-effectively <br />
+            build any software
+          </h1>
+
+          <div class="flex justify-center mb-8 animate__animated animate__fadeInUp wow md:mb-14">
+            <div class="flex gap-6 border-2 border-black rounded-full">
+              <div id="monthlyBtn" class="px-10 py-4 text-xl text-white bg-black rounded-full cursor-pointer">
+                <span class="font-semibold">Monthly</span>
+              </div>
+              <div id="annuallyBtn" class="px-10 py-4 text-xl text-black bg-white rounded-full cursor-pointer">
+                <span class="font-semibold">Annually</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative mt-12 lg:mt-16 xl:mt-20">
+            <div class="relative z-20 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <div
+                class="px-10 py-10 duration-700 ease-in-out rounded-lg animate__animated animate__flipInY wow wtransition-all bg-bgGray hover:bg-black group">
+                <div class="pb-4 transition-colors duration-700 ease-in-out border-b border-hr group-hover:text-white">
+                  <h1 class="text-3xl font-bold">Beginner</h1>
+                  <p class="text-xl">Up to 10 members</p>
+                </div>
+                <div class="mt-4 mb-8 transition-colors duration-700 ease-in-out group-hover:text-white">
+                  <h1 class="text-5xl font-semibold md:text-7xl md:font-bold">
+                    $<span class="-mr-3 numPrice">25</span>
+                    <span class="text-lg">/Per <span class="monthYear">month</span></span>
+                  </h1>
+                  <p class="mt-4 text-lg">
+                    This is an excellent option for people & small businesses
+                    who are starting out.
+                  </p>
+                </div>
+                <button
+                  class="relative w-full h-16 mt-4 overflow-hidden transition-all duration-700 ease-in-out border-2 border-black rounded-full group-hover:text-white group-hover:border-primaryRed before:absolute before:left-0 before:top-0 before:w-full before:h-0 before:bg-primaryRed before:rounded-full hover:before:h-full before:transition-all before:duration-500">
+                  <span class="relative font-bold text-center">Choose the plan</span>
+                </button>
+              </div>
+
+              <div
+                class="px-10 py-10 transition-all duration-700 ease-in-out rounded-lg animate__animated animate__flipInY wow bg-bgGray hover:bg-black group">
+                <div class="pb-4 transition-colors duration-700 ease-in-out border-b border-hr group-hover:text-white">
+                  <h1 class="text-3xl font-bold">Starter</h1>
+                  <p class="text-xl">Up to 50 members</p>
+                </div>
+                <div class="mt-4 mb-8 transition-colors duration-700 ease-in-out group-hover:text-white">
+                  <h1 class="text-5xl font-semibold md:text-7xl md:font-bold">
+                    $<span class="-mr-3 numPrice">25</span>
+                    <span class="text-lg">/Per <span class="monthYear">month</span></span>
+                  </h1>
+                  <p class="mt-4 text-lg">
+                    This plan is suitable for e-commerce stores as well as
+                    professional blogs.
+                  </p>
+                </div>
+                <button
+                  class="relative w-full h-16 mt-4 overflow-hidden transition-all duration-700 ease-in-out border-2 border-black rounded-full group-hover:text-white group-hover:border-primaryRed before:absolute before:left-0 before:top-0 before:w-full before:h-0 before:bg-primaryRed before:rounded-full hover:before:h-full before:transition-all before:duration-500">
+                  <span class="relative font-bold text-center">Choose the plan</span>
+                </button>
+              </div>
+
+              <div
+                class="px-10 py-10 transition-all duration-700 ease-in-out rounded-lg animate__animated animate__flipInY wow bg-bgGray hover:bg-black group">
+                <div class="pb-4 transition-colors duration-700 ease-in-out border-b border-hr group-hover:text-white">
+                  <h1 class="text-3xl font-bold">Pro</h1>
+                  <p class="text-xl">Up to 100 members</p>
+                </div>
+                <div class="mt-4 mb-8 transition-colors duration-700 ease-in-out group-hover:text-white">
+                  <h1 class="text-5xl font-semibold md:text-7xl md:font-bold">
+                    $<span class="-mr-3 numPrice">25</span>
+                    <span class="text-lg">/Per <span class="monthYear">month</span></span>
+                  </h1>
+                  <p class="mt-4 text-lg">
+                    Ideal for handling complicated projects enterprise-level
+                    projects, and websites.
+                  </p>
+                </div>
+                <button
+                  class="relative w-full h-16 mt-4 overflow-hidden transition-all duration-700 ease-in-out border-2 border-black rounded-full group-hover:text-white group-hover:border-primaryRed before:absolute before:left-0 before:top-0 before:w-full before:h-0 before:bg-primaryRed before:rounded-full hover:before:h-full before:transition-all before:duration-500">
+                  <span class="relative font-bold text-center">Choose the plan</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- info -->
+    <section class="mx-20 mt-20 mb-16 animate__animated animate__backInUp md:py-0 md:px-4 lg:my-32">
+      <div class="grid grid-cols-1 gap-16 sm:grid-cols-2">
+        <div class="animate__animated animate__fadeInLeft wow">
+          <h1 class="mb-8 font-bold text-7xl lg:text-7xl">
+            Freely ask us for <br />
+            more information
+          </h1>
+          <p class="mb-8 text-xl">
+            Our AI SaaS solutions can be quickly deployed, enabling users to
+            <br />
+            start benefiting from AI capabilities without lengthy setup and
+            <br />
+            development times in fast-paced industries.
           </p>
-          <ul class="tab-nav -ml-4 mt-8 border-b-0" data-tab-nav>
-            <li class="tab-nav-item active" data-tab="0">
-              <img class="mr-3" src="images/icons/drop.svg" alt="" />
-              Habit building essential choose habit
+          <button
+            class="relative h-16 px-6 mt-4 overflow-hidden text-white transition-all duration-700 ease-in-out bg-black border-2 border-transparent rounded-full group-hover:text-white hover:border-primaryRed before:absolute before:left-0 before:top-0 before:w-full before:h-0 before:bg-primaryRed before:rounded-full hover:before:h-full before:transition-all before:duration-500">
+            <span class="relative font-bold text-center">Ask you questions</span>
+          </button>
+        </div>
+        <div class="animate__animated animate__fadeInRight wow">
+          <ul class="space-y-4">
+            <li>
+              <h1 class="flex items-center justify-between text-lg font-bold cursor-pointer lg:text-2xl btnOpenText">
+                How do I start AI SaaS?
+                <i class="text-lg fa-solid fa-plus iconPlus animate-rotate-45"></i>
+              </h1>
+              <p class="block pt-4 text-lg text-gray-800 textQuestion">
+                Go to the our official website and require users to create an
+                <br />
+                account. You'll need to provide some basic information and
+                <br />
+                agree to our terms and conditions.
+              </p>
+              <hr class="mt-4 bg-gray-800" />
             </li>
-            <li class="tab-nav-item" data-tab="1">
-              <img class="mr-3" src="images/icons/brain.svg" alt="" />
-              Get an overview of Habit Calendars.
+            <li>
+              <h1 class="flex items-center justify-between text-lg font-bold cursor-pointer lg:text-2xl btnOpenText">
+                Can I customize AI SaaS solutions?
+                <i class="text-lg fa-solid fa-plus iconPlus animate-rotate-45"></i>
+              </h1>
+              <p class="hidden py-4 text-lg text-gray-800 border-b border-e-gray-800 textQuestion">
+                Go to the our official website and require users to create an
+                <br />
+                account. You'll need to provide some basic information and
+                <br />
+                agree to our terms and conditions.
+              </p>
             </li>
-            <li class="tab-nav-item" data-tab="2">
-              <img class="mr-3" src="images/icons/timer.svg" alt="" />
-              Start building with Habitify platform
+            <li>
+              <h1 class="flex items-center justify-between text-lg font-bold cursor-pointer lg:text-2xl btnOpenText">
+                How can AI benefit my business?
+                <i class="text-lg fa-solid fa-plus iconPlus animate-rotate-45"></i>
+              </h1>
+              <p class="hidden py-4 text-lg text-gray-800 textQuestion">
+                AI can help your business in various ways, such as automating
+                tasks, improving customer experience, and analyzing data to
+                make better decisions.
+              </p>
             </li>
           </ul>
         </div>
       </div>
-    </div>
-</div>
-</div>
-<div class="row gx-5 mt-12 items-center lg:mt-0">
-<div class="lg:col-7">
-  <div class="relative">
-    <img class="w-full object-contain" src="images/collaboration.png" />
-    <img
-      class="absolute bottom-6 left-1/2 -z-[1] -translate-x-1/2"
-      src="images/shape.svg"
-      alt=""
-    />
-  </div>
-</div>
-<div class="mt-6 lg:col-5 lg:mt-0">
-  <div class="text-container">
-    <h2 class="lg:text-4xl">
-      Accept payments any country in this whole universe
-    </h2>
-    <p class="mt-4">
-      Donec sollicitudin molestie malesda. Donec sollitudin molestie
-      malesuada. Mauris pellentesque nec, egestas non nisi. Cras ultricies
-      ligula sed
-    </p>
-    <ul class="mt-6 text-dark lg:-ml-4">
-      <li class="mb-2 flex items-center rounded px-4">
-        <img
-          class="mr-3"
-          src="images/icons/checkmark-circle.svg"
-          alt=""
-        />
-        Supporting more than 119 country world
-      </li>
-      <li class="mb-2 flex items-center rounded px-4">
-        <img
-          class="mr-3"
-          src="images/icons/checkmark-circle.svg"
-          alt=""
-        />
-        Open transaction with more than currencies
-      </li>
-      <li class="flex items-center rounded px-4">
-        <img
-          class="mr-3"
-          src="images/icons/checkmark-circle.svg"
-          alt=""
-        />
-        Customer Service with 79 languages
-      </li>
-    </ul>
-  </div>
-</div>
-</div>
-<div class="row gx-5 mt-12 items-center lg:mt-0">
-<div class="lg:col-7 lg:order-2">
-  <div class="video pb-5 pr-9">
-    <div class="video-thumbnail overflow-hidden rounded-2xl">
-      <img
-        class="w-full object-contain"
-        src="images/intro-thumbnail.png"
-        alt=""
-      />
-      <button class="video-play-btn">
-        <img src="images/icons/play-icon.svg" alt="" />
-      </button>
-    </div>
-    <div
-      class="video-player absolute left-0 top-0 z-10 hidden h-full w-full"
-    >
-      <iframe
-        class="h-full w-full"
-        allowfullscreen=""
-        src="https://www.youtube.com/embed/g3-VxLQO7do?autoplay=1"
-      ></iframe>
-    </div>
-    <img
-      class="intro-shape absolute bottom-0 right-0 -z-[1]"
-      src="images/shape.svg"
-      alt=""
-    />
-  </div>
-</div>
-<div class="mt-6 lg:col-5 lg:order-1 lg:mt-0">
-  <div class="text-container">
-    <h2 class="lg:text-4xl">Accountability that works for you</h2>
-    <p class="mt-4">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-      egestas Werat viverra id et aliquet. vulputate egestas sollicitudin
-      .
-    </p>
-    <button class="btn btn-white mt-6">know about us</button>
-  </div>
-</div>
-</div>
-</div>
-</section>
-<!-- ./end Services -->
+    </section>
 
-
-<!-- Reviews -->
-<section class="reviews">
-  <div class="container">
-    <div class="row justify-between">
-      <div class="lg:col-6">
-        <h2>Our customers have nice things to say about us</h2>
-      </div>
-      <div class="lg:col-4">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas
-          Werat viverra id et aliquet. vulputate egestas sollicitudin .
-        </p>
-      </div>
-    </div>
-    <div class="row mt-10">
-      <div class="col-12">
-        <div class="swiper reviews-carousel">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="review">
-                <div class="review-author-avatar bg-gradient">
-                  <img src="images/users/user-5.png" alt="" />
-                </div>
-                <h4 class="mb-2">Courtney Henry</h4>
-                <p class="mb-4 text-[#666]">microsoft corp</p>
-                <p>
-                  Our platform helps build secure onboarding authentica
-                  experiences & engage your users. We build .
-                </p>
-                <div
-                  class="review-rating mt-6 flex items-center justify-center space-x-2.5"
-                >
-                  <img src="images/icons/star.svg" alt="" />
-                  <img src="images/icons/star.svg" alt="" />
-                  <img src="images/icons/star.svg" alt="" />
-                  <img src="images/icons/star.svg" alt="" />
-                  <img src="images/icons/star-white.svg" alt="" />
-                </div>
-              </div>
+    <!-- feedback -->
+    <div class="relative bg-black pb-28">
+      <section class="container px-5 mx-auto text-white md:py-0 md:px-4 lg:py-5">
+        <h1 class="py-20 mx-auto font-bold text-center animate__animated animate__fadeInUp wow lg:text-7xl">
+          Positive feedback <br />from our users
+        </h1>
+        <div class="grid grid-cols-1 gap-6 mt-10 md:grid-cols-2 lg:grid-cols-3">
+          <div class="p-8 border border-gray-800 rounded-lg animate__animated animate__fadeInRight wow">
+            <div class="flex items-center gap-4">
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
             </div>
-            <div class="swiper-slide">
-              <div class="review">
-                <div class="review-author-avatar bg-gradient">
-                  <img src="images/users/user-2.png" alt="" />
-                </div>
-                <h4 class="mb-2">Ronald Richards</h4>
-                <p class="mb-4 text-[#666]">meta limited</p>
-                <p>
-                  Our platform helps build secure onboarding authentica
-                  experiences & engage your users. We build .
-                </p>
-                <div
-                  class="review-rating mt-6 flex items-center justify-center space-x-2.5"
-                >
-                  <img src="images/icons/star.svg" alt="" />
-                  <img src="images/icons/star.svg" alt="" />
-                  <img src="images/icons/star.svg" alt="" />
-                  <img src="images/icons/star.svg" alt="" />
-                  <img src="images/icons/star-white.svg" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="review">
-                <div class="review-author-avatar bg-gradient">
-                  <img src="images/users/user-6.png" alt="" />
-                </div>
-                <h4 class="mb-2">Bessie Cooper</h4>
-                <p class="mb-4 text-[#666]">apple inc ltd</p>
-                <p>
-                  Our platform helps build secure onboarding authentica
-                  experiences & engage your users. We build .
-                </p>
-                <div
-                  class="review-rating mt-6 flex items-center justify-center space-x-2.5"
-                >
-                  <img src="images/icons/star.svg" alt="" />
-                  <img src="images/icons/star.svg" alt="" />
-                  <img src="images/icons/star.svg" alt="" />
-                  <img src="images/icons/star.svg" alt="" />
-                  <img src="images/icons/star-white.svg" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- If we need pagination -->
-          <div
-            class="swiper-pagination reviews-carousel-pagination !bottom-0"
-          ></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Reviews -->
-
-<!-- Call To action -->
-<section class="px-5 py-20 xl:py-[120px]">
-  <div class="container">
-    <div
-      class="bg-gradient row justify-center rounded-b-[80px] rounded-t-[20px] px-[30px] pb-[75px] pt-16"
-    >
-      <div class="lg:col-11">
-        <div class="row">
-          <div class="lg:col-7">
-            <h2 class="h1 text-white">Helping teams in the world with focus</h2>
-            <a class="btn btn-white mt-8" href="#">Download The Theme</a>
-          </div>
-          <div class="mt-8 lg:col-5 lg:mt-0">
-            <p class="text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-              egestas Werat viverra id et aliquet. vulputate egestas
-              sollicitudin .
+            <p class="mt-10 text-lg font-semibold">
+              “This AI SaaS tool has revolutionized the way we process and
+              analyze data. This is a game-changer for our business.”
             </p>
+            <div class="flex items-center gap-4 mt-10">
+              <img src="./src/img/testimonial-img-1.jpg" alt="Avatar image" class="rounded-full" />
+              <div>
+                <h1 class="text-xl font-semibold">Max Weber</h1>
+                <p class="mt-1 text-sm">HR Manager</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 border border-gray-800 rounded-lg animate__animated animate__fadeInRight wow">
+            <div class="flex items-center gap-4">
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+            </div>
+            <p class="mt-10 text-lg font-semibold">
+              “It answers immediately, and we've seen a significant reduction
+              in response time. Our customers love it and so do we!”
+            </p>
+            <div class="flex items-center gap-4 mt-10">
+              <img src="./src/img/testimonial-img-2.jpg" alt="Avatar image" class="rounded-full" />
+              <div>
+                <h1 class="text-xl font-semibold">Max Weber</h1>
+                <p class="mt-1 text-sm">HR Manager</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 border border-gray-800 rounded-lg animate__animated animate__fadeInRight wow">
+            <div class="flex items-center gap-4">
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+            </div>
+            <p class="mt-10 text-lg font-semibold">
+              "It is accurate, fast and supports multiple languages support.
+              It is a must for any international business success."
+            </p>
+            <div class="flex items-center gap-4 mt-10">
+              <img src="./src/img/testimonial-img-3.jpg" alt="Avatar image" class="rounded-full" />
+              <div>
+                <h1 class="text-xl font-semibold">Max Weber</h1>
+                <p class="mt-1 text-sm">HR Manager</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 border border-gray-800 rounded-lg animate__animated animate__fadeInLeft wow">
+            <div class="flex items-center gap-4">
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+            </div>
+            <p class="mt-10 text-lg font-semibold">
+              "Security is a top concern for us, and AI SaaS takes it
+              seriously. It's a reassuring layer of protection for our
+              organization."
+            </p>
+            <div class="flex items-center gap-4 mt-10">
+              <img src="./src/img/testimonial-img-4.jpg" alt="Avatar image" class="rounded-full" />
+              <div>
+                <h1 class="text-xl font-semibold">Max Weber</h1>
+                <p class="mt-1 text-sm">HR Manager</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 border border-gray-800 rounded-lg animate__animated animate__fadeInLeft wow">
+            <div class="flex items-center gap-4">
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+            </div>
+            <p class="mt-10 text-lg font-semibold">
+              "We were concerned about integrating their APIs were well
+              documented, and their support team was super cool."
+            </p>
+            <div class="flex items-center gap-4 mt-10">
+              <img src="./src/img/testimonial-img-5.jpg" alt="Avatar image" class="rounded-full" />
+              <div>
+                <h1 class="text-xl font-semibold">Max Weber</h1>
+                <p class="mt-1 text-sm">HR Manager</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 border border-gray-800 rounded-lg animate__animated animate__fadeInLeft wow">
+            <div class="flex items-center gap-4">
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+              <i class="text-2xl fa-solid fa-star text-primaryRed"></i>
+            </div>
+            <p class="mt-10 text-lg font-semibold">
+              "The return on investment has exceeded our expectations. it's an
+              investment in the future of our business."
+            </p>
+            <div class="flex items-center gap-4 mt-10">
+              <img src="./src/img/testimonial-img-6.jpg" alt="Avatar image" class="rounded-full" />
+              <div>
+                <h1 class="text-xl font-semibold">Max Weber</h1>
+                <p class="mt-1 text-sm">HR Manager</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- footer -->
+    <div class="bg-black">
+      <div class="mx-auto md:py-0 bg-[#EFEAE3] rounded-t-[2rem] lg:rounded-t-[3rem] relative">
+        <div class="pt-16 pb-16 overflow-hidden">
+          <div
+            class="bg-gradient-to-r from-orange-600 to-orange-700 filter blur-[55px] w-[400px] h-[300px] absolute top-[10] right-5">
+          </div>
+          <!-- <div
+            class="bg-orange-gradient-2 blur-55 absolute -left-[10px] top-[40%] -z-[1] h-[800px] w-[500px] -rotate-[-9.022deg] rounded-[360px]">
+          </div> -->
+          <div
+            class="flex w-full h-full gap-4 font-bold text-8xl animate-rigtToLeft whitespace-nowrap py-[60px] xl:pb-[60px] xl:pt-[70px]">
+            <div class="footer-text-slider flex w-full items-center gap-x-[40px] whitespace-nowrap">
+              <img src="./src/img/footer-text-slider-icon.svg" alt="Icon footer"
+                class="h-15 w-15 lg:h-[60px] lg:w-[60px]" />
+              <span class="text-black lg:text-6xl xl:text-7xl xxl:text-[80px]">Start building software</span>
+              <img src="./src/img/footer-text-slider-icon.svg" alt="Icon footer"
+                class="h-15 w-15 lg:h-[60px] lg:w-[60px]" />
+              <span class="text-black lg:text-6xl xl:text-7xl xxl:text-[80px]">Start building software</span>
+              <img src="./src/img/footer-text-slider-icon.svg" alt="Icon footer"
+                class="h-15 w-15 lg:h-[60px] lg:w-[60px]" />
+              <span class="text-black lg:text-6xl xl:text-7xl xxl:text-[80px]">Start building software</span>
+              <img src="./src/img/footer-text-slider-icon.svg" alt="Icon footer"
+                class="h-15 w-15 lg:h-[60px] lg:w-[60px]" />
+              <span class="text-black lg:text-6xl xl:text-7xl xxl:text-[80px]">Start building software</span>
+            </div>
+          </div>
+        </div>
+        <div class="border-t-2 border-gray-300 px-30">
+          <div class="grid justify-center pt-20 pb-20 text-xl grid-cols-custom">
+            <div>
+              <img src="./src/img/logo.png" alt="Logo image" />
+              <p class="mt-8 text-lg">
+                Our mission is to harness the power of AI to <br />
+                solve complex business challenges & <br />decision-makers with
+                data-driven insights,<br />
+                and enhance user experiences across digital <br />
+                platforms.
+              </p>
+              <p class="mt-6 text-lg">Website: www.example.com</p>
+            </div>
+
+            <div>
+              <h1 class="font-bold">Primary Pages</h1>
+              <ul class="mt-4 space-y-4">
+                <li>
+                  <span class="transition-all duration-300 cursor-pointer hover:text-primaryRed">Home</span>
+                </li>
+                <li>
+                  <span class="transition-all duration-300 cursor-pointer hover:text-primaryRed">About Us</span>
+                </li>
+                <li>
+                  <span class="transition-all duration-300 cursor-pointer hover:text-primaryRed">Services</span>
+                </li>
+                <li>
+                  <span class="transition-all duration-300 cursor-pointer hover:text-primaryRed">Pricing</span>
+                </li>
+                <li>
+                  <span class="transition-all duration-300 cursor-pointer hover:text-primaryRed">Contact</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h1 class="font-bold">Utility pages</h1>
+              <ul class="mt-4 space-y-4">
+                <li>
+                  <span class="transition-all duration-300 cursor-pointer hover:text-primaryRed">Signup</span>
+                </li>
+                <li class="transition-all duration-300 cursor-pointer hover:text-primaryRed">
+                  <span class="transition-all duration-300 cursor-pointer hover:text-primaryRed">Login</span>
+                </li>
+                <li class="transition-all duration-300 cursor-pointer hover:text-primaryRed">
+                  <span class="transition-all duration-300 cursor-pointer hover:text-primaryRed">404 Not found</span>
+                </li>
+                <li class="transition-all duration-300 cursor-pointer hover:text-primaryRed">
+                  <span class="transition-all duration-300 cursor-pointer hover:text-primaryRed">Password Reset</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="flex flex-col gap-y-4">
+              <h1 class="font-bold text-black capitalize">
+                Subscribe to our newsletter
+              </h1>
+              <div class="relative mt-4">
+                <input type="text" class="w-full px-2 py-3 border border-black rounded-full"
+                  placeholder="Enter your email" />
+                <div class="absolute px-7 py-2 bg-black rounded-full top-[5px] right-[7px] hover:bg-orange-500">
+                  <i class="text-xl text-white fa-solid fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border-t border-gray-300"></div>
+          <div class="py-8 text-center">
+            <span class="text-xl font-bold">© </span>
+            Copyright 2023, All Rights Reserved by Mthemeus
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<footer class="footer bg-theme-light/50">
-  <div class="container">
-    <div class="row gx-5 pb-10 pt-[52px]">
-      <div class="col-12 mt-12 md:col-6 lg:col-3">
-        <a href="index.html">
-          <img src="images/logo.svg" alt="" />
-        </a>
-        <p class="mt-6">
-          Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo
-          tellus, sed condimentum volutpat.
-        </p>
-      </div>
-      <div class="col-12 mt-12 md:col-6 lg:col-3">
-        <h6>Socials</h6>
-        <p>themefisher@gmail.com</p>
-        <ul class="social-icons mt-4 lg:mt-6">
-          <li>
-            <a href="#">
-              <svg
-                width="19"
-                height="21"
-                viewBox="0 0 20 21"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M19.1056 10.4495C19.1056 5.09642 15 0.759277 9.9327 0.759277C4.86539 0.759277 0.759766 5.09642 0.759766 10.4495C0.759766 15.2946 4.08865 19.3191 8.49018 20.0224V13.2627H6.15996V10.4495H8.49018V8.33951C8.49018 5.91696 9.85872 4.54939 11.93 4.54939C12.9657 4.54939 14.0013 4.74476 14.0013 4.74476V7.12823H12.8547C11.7081 7.12823 11.3382 7.87063 11.3382 8.65209V10.4495H13.8904L13.4835 13.2627H11.3382V20.0224C15.7398 19.3191 19.1056 15.2946 19.1056 10.4495Z"
-                  fill="#222222"
-                />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <svg
-                width="19"
-                height="15"
-                viewBox="0 0 19 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16.3308 3.92621C17.0129 3.42889 17.6269 2.83209 18.1044 2.13583C17.4904 2.40108 16.7742 2.60001 16.0579 2.66632C16.8083 2.2353 17.354 1.5722 17.6269 0.743317C16.9447 1.14118 16.1603 1.43958 15.3758 1.60535C14.6937 0.909093 13.7728 0.51123 12.7496 0.51123C10.7714 0.51123 9.16837 2.06952 9.16837 3.99252C9.16837 4.25777 9.20248 4.52301 9.27069 4.78825C6.3034 4.62247 3.64307 3.22995 1.86952 1.14118C1.56256 1.63851 1.39202 2.2353 1.39202 2.8984C1.39202 4.09199 2.00595 5.15296 2.99504 5.7829C2.41523 5.74975 1.83541 5.61713 1.35792 5.35189V5.38504C1.35792 7.07596 2.58576 8.46847 4.22289 8.80002C3.95003 8.86633 3.60897 8.93265 3.302 8.93265C3.06326 8.93265 2.85862 8.89949 2.61987 8.86633C3.06326 10.2589 4.39342 11.2535 5.96233 11.2867C4.73449 12.215 3.19968 12.7786 1.52845 12.7786C1.22149 12.7786 0.948636 12.7455 0.675781 12.7123C2.24469 13.707 4.12057 14.2706 6.16698 14.2706C12.7496 14.2706 16.3308 8.99896 16.3308 4.39039C16.3308 4.22461 16.3308 4.09199 16.3308 3.92621Z"
-                  fill="#222222"
-                />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <svg
-                width="19"
-                height="16"
-                viewBox="0 0 19 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.56609 15.2704V5.45315H0.948103V15.2704H4.56609ZM2.73764 4.1398C3.90474 4.1398 4.83841 3.31895 4.83841 2.33394C4.83841 1.38176 3.90474 0.59375 2.73764 0.59375C1.60945 0.59375 0.675781 1.38176 0.675781 2.33394C0.675781 3.31895 1.60945 4.1398 2.73764 4.1398ZM18.0654 15.2704H18.1044V9.8857C18.1044 7.259 17.4041 5.22331 13.7472 5.22331C11.9966 5.22331 10.8295 6.04415 10.3237 6.79933H10.2848V5.45315H6.82246V15.2704H10.4404V10.411C10.4404 9.13053 10.7128 7.91568 12.5801 7.91568C14.4475 7.91568 14.4864 9.36036 14.4864 10.5095V15.2704H18.0654Z"
-                  fill="#222222"
-                />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <svg
-                width="19"
-                height="18"
-                viewBox="0 0 17 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15.3829 10.554C15.4875 10.0381 15.5573 9.48523 15.5573 8.9324C15.5573 4.76772 12.3483 1.37701 8.40687 1.37701C7.88367 1.37701 7.36047 1.45072 6.87215 1.56129C6.20943 1.00846 5.37231 0.676758 4.50031 0.676758C2.33775 0.676758 0.59375 2.55639 0.59375 4.80458C0.59375 5.76282 0.87279 6.64735 1.39599 7.34761C1.29135 7.86359 1.22159 8.41642 1.22159 8.9324C1.22159 13.1339 4.43055 16.5246 8.37199 16.5246C8.89518 16.5246 9.41838 16.4509 9.9067 16.3404C10.5694 16.8932 11.4065 17.188 12.2785 17.188C14.4411 17.188 16.1851 15.3453 16.1851 13.0602C16.22 12.1388 15.9061 11.2543 15.3829 10.554ZM8.61615 13.9447C6.31407 13.9447 4.39567 12.8759 4.39567 11.5491C4.39567 10.9595 4.70959 10.4066 5.44207 10.4066C6.52335 10.4066 6.62799 12.0651 8.51151 12.0651C9.3835 12.0651 9.97646 11.6597 9.97646 11.1069C9.97646 10.4066 9.41838 10.2961 8.51151 10.0749C6.34895 9.48523 4.39567 9.2641 4.39567 6.86849C4.39567 4.65716 6.45359 3.84633 8.19759 3.84633C10.116 3.84633 12.0693 4.65716 12.0693 5.91024C12.0693 6.53679 11.6856 7.08962 11.0229 7.08962C10.0462 7.08962 10.0113 5.83653 8.40687 5.83653C7.49999 5.83653 6.94191 6.09452 6.94191 6.68421C6.94191 7.38446 7.67439 7.45818 9.34862 7.90044C10.7787 8.23214 12.5227 8.85869 12.5227 10.7383C12.5227 12.9128 10.5345 13.9447 8.61615 13.9447Z"
-                  fill="#222222"
-                />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-12 mt-12 md:col-6 lg:col-3">
-        <h6>Quick Links</h6>
-        <ul>
-          <li>
-            <a href="about.html">About</a>
-          </li>
-          <li>
-            <a href="#">Category</a>
-          </li>
-          <li>
-            <a href="#">Testimonial</a>
-          </li>
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-12 mt-12 md:col-6 lg:col-3">
-        <h6>Location & Contact</h6>
-        <p>2118 Thornridge Cir. Syracuse, Connecticut 35624</p>
-        <p>(704) 555-0127</p>
-      </div>
-    </div>
-  </div>
-  <div class="container max-w-[1440px]">
+    <!-- Hình nên full page -->
     <div
-      class="footer-copyright mx-auto border-t border-border pb-10 pt-7 text-center"
-    >
-      <p>Designed And Developed by <a href="https://themefisher.com" target="_blank">Themefisher</a></p>
+      class="bg-orange-gradient-1 blur-55 absolute -left-[10px] top-[64%] -z-[1] h-[400px] w-[400px] -rotate-[-9.022deg] rounded-[400px]">
     </div>
-  </div>
-</footer>
+    <div
+      class="bg-orange-gradient-2 blur-55 absolute -left-[10px] top-[40%] -z-[1] h-[800px] w-[500px] -rotate-[-9.022deg] rounded-[360px]">
+    </div>
 
+  </main>
 
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
+  <!-- counterup  -->
+  <!-- Thư viện jquery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <!-- Thư viện Jquery waypoints -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <!-- Thư viện count up -->
+  <script src="./src/js/jquery.countup.min.js"></script>
+  <!-- Count up JS  -->
+  <script>
+    $(".counter").countUp();
+  </script>
+  <!-- WowJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+    integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    new WOW().init();
+  </script>
 
-
-
-<!-- jQuery -->
-<!-- <script src="plugins/jquery/jquery.min.js"></script> -->
-<!-- Swiper JS -->
- <!-- Scripts -->
- <script src="plugins/swiper/swiper-bundle.js"></script>
- <script src="scripts/main.js"></script><!DOCTYPE html>
- <html lang="zxx">
- <head>
-   <link rel="shortcut icon" href="images/favicon.png" />
-   <meta name="theme-name" content="Pinwheel" />
-   <meta name="msapplication-TileColor" content="#000000" />
-   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
-   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
-   <meta name="generator" content="gulp" />
-   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-   <title>Pinwheel-tailwind</title>
-   <link rel="preconnect" href="https://fonts.googleapis.com" />
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
-   <link rel="stylesheet" href="plugins/swiper/swiper-bundle.css" />
-   <link rel="stylesheet" href="plugins/font-awesome/v6/brands.css" />
-   <link rel="stylesheet" href="plugins/font-awesome/v6/solid.css" />
-   <link rel="stylesheet" href="plugins/font-awesome/v6/fontawesome.css" />
-   <link rel="stylesheet" href="./dist/output.css">
- </head>
- 
- <body class="font-poppins">
-   <!-- Header -->
-   <header class="bg-white shadow-sm">
-     <nav class="container mx-auto px-4">
-      
-      <!-- ---script------ -->
-   <script src="plugins/swiper/swiper-bundle.js"></script>
-   <script src="scripts/main.js"></script>
- </body>
- </html>
- 
+  <script src="./src/js/main.js"></script>
 </body>
+
 </html>
